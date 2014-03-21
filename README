@@ -1,0 +1,25 @@
+This application is an example of question enthuware.oce-ejbd.v6.2.411, from enthuware's for Oracle Certified Expert - Enterprise JavaBeans Developer 6 exam simulator:
+
+http://enthuware.com/index.php/mock-exams/oracle-certified-expert/oceejbd-ejb-6
+
+I posted a question on 
+
+http://enthuware.com/forum/viewtopic.php?f=4&t=2450
+
+and they answered me, so I decided to create an example of the question.
+
+This is the example where another bean calls a business method in another stateless session bean.
+Then this business method calls an asynchronous method in the same object.
+This is the question exactly, the code will execute synchronously because the async call will not be managed by the container, it's a simple direct method call.
+
+To install in Eclipse, just run
+
+mvn eclipse:eclipse 
+
+Then import the project directory to your eclipse workspace.
+
+To run on glassfish embedded server, just run
+
+mvn clean package install
+
+You can also run the unit tests on Eclipse, the result is the same.
