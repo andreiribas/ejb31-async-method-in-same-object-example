@@ -41,13 +41,13 @@ import org.apache.log4j.Logger;
  * 
  */
 @Stateless(name="asyncCalculator")
-public class AsyncStatelessSessionBean implements AsyncCalculator {
+public class AsyncCalculatorBean implements AsyncCalculator {
 
 	private Logger LOGGER;
 	
 	@PostConstruct
 	public void setUp() {
-		this.LOGGER = Logger.getLogger(AsyncStatelessSessionBean.class);
+		this.LOGGER = Logger.getLogger(AsyncCalculatorBean.class);
 	}
 	
 	@Override

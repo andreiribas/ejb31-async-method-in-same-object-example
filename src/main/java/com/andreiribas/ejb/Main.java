@@ -48,7 +48,7 @@ public class Main {
 	private Logger LOGGER;
 	
 	@EJB(name="asyncCalculator")
-	private AsyncCalculator asyncCalculationBean;
+	private AsyncCalculator asyncCalculatorBean;
 	
 	@PostConstruct
 	public void start() {
@@ -57,7 +57,7 @@ public class Main {
 	
 		LOGGER.debug("Calling Async method on AsyncCalculator bean.");
 		
-		Future<Double> asyncCalcResult = asyncCalculationBean.calc();
+		Future<Double> asyncCalcResult = asyncCalculatorBean.calc();
 		
 		LOGGER.debug("Async method on AsyncCalculator bean returned. Now Future.get() method will be called on the Future object.");
 		

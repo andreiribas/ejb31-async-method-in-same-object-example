@@ -48,7 +48,7 @@ import org.junit.Test;
  * @author Andrei Gonçalves Ribas <andrei.g.ribas@gmail.com>
  * 
  */
-public class AsyncTester {
+public class AsyncCalculatorBeanTest {
 
 	private static Logger LOGGER;
 
@@ -59,7 +59,7 @@ public class AsyncTester {
 	@BeforeClass
 	public static void setUp() {
 
-		LOGGER = Logger.getLogger(AsyncTester.class);
+		LOGGER = Logger.getLogger(AsyncCalculatorBeanTest.class);
 
 		Map<String, File> properties = new HashMap<String, File>();
 
@@ -77,7 +77,7 @@ public class AsyncTester {
 	}
 
 	@Test
-	public void testAsyncMethod() throws NamingException, InterruptedException, ExecutionException {
+	public void testAsyncCalculator() throws NamingException, InterruptedException, ExecutionException {
 
 		AsyncCalculator asyncCalculationBean = (AsyncCalculator) ctx
 				.lookup("java:global/classes/asyncCalculator");
